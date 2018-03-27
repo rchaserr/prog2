@@ -1,5 +1,5 @@
 
-package modelo;
+package model;
 
 public class Endereco {
     private String cep;
@@ -13,7 +13,6 @@ public class Endereco {
         this.rua = rua;
         this.num = num;
         this.pessoa = pessoa;
-        
     }
     /**
      * @return the cep

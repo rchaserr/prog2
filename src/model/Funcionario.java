@@ -1,5 +1,5 @@
 
-package modelo;
+package model;
 
 
 public abstract class Funcionario extends Pessoa{
@@ -9,7 +9,4 @@ public abstract class Funcionario extends Pessoa{
     public Funcionario(String nome, String cpf) {
         super(nome, cpf);
     }
-    
-   
-    
 }

@@ -1,5 +1,5 @@
 
-package modelo;
+package model;
 
 
 public class Professor extends Funcionario{

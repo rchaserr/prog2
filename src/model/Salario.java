@@ -1,6 +1,6 @@
 
 
-package modelo;
+package model;
 
 
 public class Salario {
