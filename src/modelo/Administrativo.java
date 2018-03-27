@@ -1,8 +1,6 @@
-
 package modelo;
 
-
-public class Administrativo extends Funcionario{
+public class Administrativo extends Funcionario {
     
     private int codAdm;
     private long idAdm;
