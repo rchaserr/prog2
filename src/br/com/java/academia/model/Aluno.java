@@ -1,4 +1,4 @@
-package model;
+package br.com.java.academia.model;
 
 import java.util.List;
 
@@ -9,7 +9,6 @@ public class Aluno extends Pessoa {
     
     //plural listas
     private List<Aula> aula;
-    private List<Professor> professor;
     
     public Aluno(String nome, String cpf, String matricula) {
         super(nome, cpf);
@@ -28,16 +27,7 @@ public class Aluno extends Pessoa {
         return aula;
     }
     
-    public void setAula(Aula aula) {
-        this.aula = (List<Aula>) aula;
-    }
-    
-    public List<Professor> getProfessor() {
-        return professor;
-    }
-
-    public void setProfessor(Professor professor) {
-        this.professor = (List<Professor>) professor;
-    }
-    
+    public void addAula(Aula aula) {
+        this.aula.add(aula);
+    } 
 }

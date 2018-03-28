@@ -1,11 +1,11 @@
-package model;
+package br.com.java.academia.model;
 
-public class Pessoa {
+public abstract class Pessoa {
     
     private String nome;
     private String cpf;
     private Endereco endereco;
-    private long id;
+    private long idPessoa;
 
     public String getNome() {
         return nome;

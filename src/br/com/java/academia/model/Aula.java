@@ -1,4 +1,4 @@
-package model;
+package br.com.java.academia.model;
 
 import java.util.List;
 

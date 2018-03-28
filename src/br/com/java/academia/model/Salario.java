@@ -1,6 +1,6 @@
 
 
-package model;
+package br.com.java.academia.model;
 
 
 public class Salario {

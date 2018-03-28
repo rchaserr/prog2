@@ -1,8 +1,8 @@
 
-package model;
+package br.com.java.academia.model;
 
 
-public abstract class Funcionario extends Pessoa{
+public abstract class Funcionario extends Pessoa {
     
     private long idFunc;
     
