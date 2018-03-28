@@ -7,47 +7,39 @@ public class Aula {
   private double tempo;
   private int quantidadeAulunos;
   private long idAula;
-  private List<Aluno> aluno;
-  private List<Professor> professor;
+  
+  private List<Aluno> alunos;
+  private List<Professor> professores;
     
     public double getTempo() {
         return tempo;
     }
-
     
     public void setTempo(double tempo) {
         this.tempo = tempo;
     }
-
     
     public int getQuantidadeAulunos() {
         return quantidadeAulunos;
     }
-
     
     public void setQuantidadeAulunos(int quantidadeAulunos) {
         this.quantidadeAulunos = quantidadeAulunos;
     }
-
     
-    public List<Aluno> getAluno() {
-        return aluno;
+    public List<Aluno> getAlunos() {
+        return this.alunos;
     }
-
    
-    public void setAluno(List<Aluno> aluno) {
-        this.aluno = aluno;
+    public void addAlunos(Aluno aluno) {
+        this.alunos.add(aluno);
     }
-
    
-    public List<Professor> getProfessor() {
-        return professor;
+    public List<Professor> getProfessores() {
+        return this.professores;
     }
 
-    public void setProfessor(Professor professor) {
-        this.professor = (List<Professor>) professor;
-    }
-  
-  
-    
+    public void addProfessor(Professor professor) {
+        this.professores.add(professor);
+    }   
 }
