@@ -1,6 +1,6 @@
 package br.com.java.academia.model;
 
-public abstract class Pessoa {
+public abstract class Pessoa extends Modelo<Pessoa>{
     
     private String nome;
     private String cpf;

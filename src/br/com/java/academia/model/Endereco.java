@@ -1,7 +1,7 @@
 
 package br.com.java.academia.model;
 
-public class Endereco {
+public class Endereco extends Modelo<Endereco>{
     private String cep;
     private String rua;
     private int num;

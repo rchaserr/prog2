@@ -3,7 +3,7 @@
 package br.com.java.academia.model;
 
 
-public class Salario {
+public class Salario extends Modelo<Salario>{
     
     private double valor;
     private long idSalario;

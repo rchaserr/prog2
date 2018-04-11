@@ -2,7 +2,7 @@ package br.com.java.academia.model;
 
 import java.util.List;
 
-public class Aula {
+public class Aula extends Modelo<Aula>{
     
   private double tempo;
   private int quantidadeAulunos;
