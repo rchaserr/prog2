@@ -48,5 +48,13 @@ Contributor(s):
     <property name="hibernate.connection.password">1234</property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
+    <mapping class="br.com.java.academia.model.Administrativo"/>
+    <mapping class="br.com.java.academia.model.Aluno"/>
+    <mapping class="br.com.java.academia.model.Aula"/>
+    <mapping class="br.com.java.academia.model.Endereco"/>
+    <mapping class="br.com.java.academia.model.Funcionario"/>
+    <mapping class="br.com.java.academia.model.Pessoa"/>
+    <mapping class="br.com.java.academia.model.Professor"/>
+    <mapping class="br.com.java.academia.model.Salario"/>
   </session-factory>
 </hibernate-configuration>
