@@ -3,13 +3,23 @@ package br.com.java.academia.model;
 import java.util.List;
 
 public class Aula extends Modelo<Aula>{
-    
+  private String nome; 
   private double tempo;
   private int quantidadeAulunos;
   private long idAula;
   
   private List<Aluno> alunos;
   private List<Professor> professores;
+  
+  
+      
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     
     public double getTempo() {
         return tempo;
@@ -42,4 +52,6 @@ public class Aula extends Modelo<Aula>{
     public void addProfessor(Professor professor) {
         this.professores.add(professor);
     }   
+    
+
 }
