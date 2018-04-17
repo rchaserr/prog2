@@ -1,7 +1,9 @@
 package br.com.java.academia.model;
 
 import java.util.List;
+import javax.persistence.*;
 
+@Entity
 public class Aluno extends Pessoa {
     
     private String matricula;
@@ -9,6 +11,11 @@ public class Aluno extends Pessoa {
     
     //plural listas
     private List<Aula> aula;
+
+    public Aluno() {
+        super();
+        this.matricula = "";
+    }
     
     public Aluno(String nome, String cpf, String matricula) {
         super(nome, cpf);

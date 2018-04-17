@@ -1,10 +1,21 @@
 package br.com.java.academia.model;
 
+import javax.persistence.*;
+
+@Entity
+@Inheritance(strategy=InheritanceType.JOINED)
 public abstract class Pessoa extends Modelo<Pessoa>{
     
+    @Column(nullable=false)
     private String nome;
+    
+    @Column(nullable=false, unique=true)
     private String cpf;
+    
     private Endereco endereco;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idPessoa;
 
     public String getNome() {
@@ -29,6 +40,11 @@ public abstract class Pessoa extends Modelo<Pessoa>{
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+    
+    public Pessoa() {
+        this.nome = "";
+        this.cpf = "";
     }
     
     public Pessoa(String nome, String cpf){
