@@ -10,7 +10,7 @@ public class Aluno extends Pessoa {
     private String matricula;
     
     @OneToMany
-    private List<Aula> aula;
+    private List<Aula> aulas;
 
     public Aluno() {
         super();
@@ -31,10 +31,10 @@ public class Aluno extends Pessoa {
     }
    
     public List<Aula> getAula() {
-        return aula;
+        return aulas;
     }
     
     public void addAula(Aula aula) {
-        this.aula.add(aula);
+        this.aulas.add(aula);
     } 
 }
