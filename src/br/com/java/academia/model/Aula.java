@@ -1,5 +1,6 @@
 package br.com.java.academia.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 
@@ -29,7 +30,7 @@ public class Aula extends Modelo<Aula>{
         this.nome = "";
         this.tempo = 0;
         this.quantidadeAulunos = 0;
-        this.alunos = null;
+        this.alunos = new ArrayList();
         this.professor = null;
     }
     

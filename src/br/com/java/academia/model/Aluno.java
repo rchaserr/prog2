@@ -1,5 +1,6 @@
 package br.com.java.academia.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 
@@ -10,11 +11,12 @@ public class Aluno extends Pessoa {
     private String matricula;
     
     @OneToMany
-    private List<Aula> aula;
+    private List<Aula> aulas;
 
     public Aluno() {
         super();
         this.matricula = "";
+        this.aulas = new ArrayList();
     }
     
     public Aluno(String nome, String cpf, String matricula) {
@@ -31,10 +33,10 @@ public class Aluno extends Pessoa {
     }
    
     public List<Aula> getAula() {
-        return aula;
+        return aulas;
     }
     
     public void addAula(Aula aula) {
-        this.aula.add(aula);
+        this.aulas.add(aula);
     } 
 }

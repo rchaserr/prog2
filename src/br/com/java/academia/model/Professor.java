@@ -1,5 +1,6 @@
 package br.com.java.academia.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 
@@ -11,6 +12,7 @@ public class Professor extends Funcionario{
 
     public Professor() {
         super();
+        this.aulas = new ArrayList();
     }
     
     public Professor(String nome, String cpf, float salario) {
@@ -21,7 +23,7 @@ public class Professor extends Funcionario{
         return aulas;
     }
 
-    public void setAulas(List<Aula> aulas) {
-        this.aulas = aulas;
+    public void addAula(Aula aula) {
+        this.aulas.add(aula);
     }
 }

@@ -55,6 +55,5 @@ Contributor(s):
     <mapping class="br.com.java.academia.model.Funcionario"/>
     <mapping class="br.com.java.academia.model.Pessoa"/>
     <mapping class="br.com.java.academia.model.Professor"/>
-    <mapping class="br.com.java.academia.model.Salario"/>
   </session-factory>
 </hibernate-configuration>
