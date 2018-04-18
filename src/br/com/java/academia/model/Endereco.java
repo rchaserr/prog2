@@ -27,13 +27,6 @@ public class Endereco extends Modelo<Endereco>{
         this.num = 0;
         this.pessoa = null;
     }
-    
-    public Endereco(){
-        cep="";
-        rua="";
-        num=0;
-        pessoa=null;
-    }
   
     public Endereco(String cep, String rua, int num, Pessoa pessoa){
         this.cep = cep;
