@@ -1,18 +1,15 @@
 package br.com.java.academia.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Administrativo extends Funcionario {
 
-    private long idAdm;
-
-    public Administrativo(String nome, String cpf) {
-        super(nome, cpf);
+    public Administrativo(String nome, String cpf, float salario) {
+        super(nome, cpf, salario);
     }
- 
-    public long getIdAdm() {
-        return idAdm;
-    }
-
-    public void setIdAdm(long idAdm) {
-        this.idAdm = idAdm;
+    
+    public Administrativo() {
+        super();
     }
 }

@@ -6,10 +6,10 @@ import javax.persistence.*;
 @Entity
 public class Aluno extends Pessoa {
     
+    @Column(nullable=false)
     private String matricula;
-    private long idMatricula;
     
-    //plural listas
+    @OneToMany
     private List<Aula> aula;
 
     public Aluno() {

@@ -1,23 +1,27 @@
 package br.com.java.academia.model;
 
+import java.util.List;
+import javax.persistence.*;
+
+@Entity
 public class Professor extends Funcionario{
     
-    private long idProfessor;
-    
-    public Professor(){
-        this.idProfessor=idProfessor;
-    }
-   
-    public Professor(String nome, String cpf) {
-        super(nome, cpf);
-    }
+    @OneToMany
+    private List<Aula> aulas;
 
-    public long getIdProfessor() {
-        return idProfessor;
-    }
-
-    public void setIdProfessor(long idProfessor) {
-        this.idProfessor = idProfessor;
+    public Professor() {
+        super();
     }
     
+    public Professor(String nome, String cpf, float salario) {
+        super(nome, cpf, salario);
+    }
+
+    public List<Aula> getAulas() {
+        return aulas;
+    }
+
+    public void setAulas(List<Aula> aulas) {
+        this.aulas = aulas;
+    }
 }

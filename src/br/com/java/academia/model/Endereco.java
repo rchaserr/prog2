@@ -1,12 +1,32 @@
-
 package br.com.java.academia.model;
 
+import javax.persistence.*;
+
+@Entity
 public class Endereco extends Modelo<Endereco>{
+    
+    @Column(nullable=false)
     private String cep;
+    
+    @Column(nullable=false)
     private String rua;
+    
+    @Column(nullable=false)
     private int num;
+    
+    @OneToOne
     private Pessoa pessoa;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idEndereco;
+
+    public Endereco() {
+        this.cep = "";
+        this.rua = "";
+        this.num = 0;
+        this.pessoa = null;
+    }
     
     public Endereco(){
         cep="";
@@ -75,8 +95,13 @@ public class Endereco extends Modelo<Endereco>{
      */
     public void setPessoa(Pessoa pessoa) {
         this.pessoa = pessoa;
+    } 
+
+    public long getIdEndereco() {
+        return idEndereco;
     }
-    
-    
-    
+
+    public void setIdEndereco(long idEndereco) {
+        this.idEndereco = idEndereco;
+    }
 }

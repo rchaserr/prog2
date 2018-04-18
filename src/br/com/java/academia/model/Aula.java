@@ -1,18 +1,38 @@
 package br.com.java.academia.model;
 
 import java.util.List;
+import javax.persistence.*;
 
+@Entity
 public class Aula extends Modelo<Aula>{
-  private String nome; 
-  private double tempo;
-  private int quantidadeAulunos;
-  private long idAula;
-  
-  private List<Aluno> alunos;
-  private List<Professor> professores;
-  
-  
-      
+    
+    @Column(nullable=false)
+    private String nome;
+    
+    @Column(nullable=false)
+    private double tempo;
+    
+    @Column(nullable=false)
+    private int quantidadeAulunos;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idAula;
+    
+    @OneToMany
+    private List<Aluno> alunos;
+    
+    @OneToOne
+    private Professor professor;
+
+    public Aula() {
+        this.nome = "";
+        this.tempo = 0;
+        this.quantidadeAulunos = 0;
+        this.alunos = null;
+        this.professor = null;
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -44,14 +64,20 @@ public class Aula extends Modelo<Aula>{
     public void addAlunos(Aluno aluno) {
         this.alunos.add(aluno);
     }
-   
-    public List<Professor> getProfessores() {
-        return this.professores;
+
+    public long getIdAula() {
+        return idAula;
     }
 
-    public void addProfessor(Professor professor) {
-        this.professores.add(professor);
-    }   
-    
+    public void setIdAula(long idAula) {
+        this.idAula = idAula;
+    }
 
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
 }

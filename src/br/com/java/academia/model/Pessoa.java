@@ -12,6 +12,7 @@ public abstract class Pessoa extends Modelo<Pessoa>{
     @Column(nullable=false, unique=true)
     private String cpf;
     
+    @OneToOne
     private Endereco endereco;
     
     @Id
