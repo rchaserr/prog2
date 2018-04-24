@@ -12,14 +12,11 @@ public class Aluno extends Pessoa {
     
     @Column(nullable=false)
     private String matricula;
-    
-    @OneToMany
-    private List<Disciplina> aulas;
 
     public Aluno() {
         super();
         this.matricula = "";
-        this.aulas = new ArrayList();
+        this.turmas = null;
     }
     
     public Aluno(String nome, String cpf, String matricula) {
@@ -35,11 +32,7 @@ public class Aluno extends Pessoa {
         this.matricula = matricula;
     }
    
-    public List<Disciplina> getAula() {
-        return aulas;
+    public List<Turma> getTurmas() {
+        return this.turmas;
     }
-    
-    public void addAula(Disciplina aula) {
-        this.aulas.add(aula);
-    } 
 }

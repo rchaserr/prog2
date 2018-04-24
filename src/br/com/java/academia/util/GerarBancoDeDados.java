@@ -44,7 +44,7 @@ public class GerarBancoDeDados {
         /* criando aula = piscina */
         Disciplina piscina = new Disciplina();
         piscina.setNome("natacao");
-        piscina.setQuantidadeAulunos(10);
+//        piscina.setQuantidadeAulunos(10);
         piscina.setTempo(50.0);
 //        piscina.inserir();
         

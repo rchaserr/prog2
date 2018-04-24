@@ -28,6 +28,10 @@ public class Turma extends Modelo<Turma>{
     
     @OneToMany
     private List<Aluno> alunos;
+    
+    @Column(nullable=false)
+    private int quantidadeAulunos;
+    
 
     public long getIdTurma() {
         return idTurma;
@@ -59,6 +63,18 @@ public class Turma extends Modelo<Turma>{
 
     public void setAlunos(List<Aluno> alunos) {
         this.alunos = alunos;
+    }
+    
+    public void addAluno(Aluno aluno) {
+        this.alunos.add(aluno);
+    }
+    
+    public int getQuantidadeAulunos() {
+        return quantidadeAulunos;
+    }
+    
+    public void setQuantidadeAulunos(int quantidadeAulunos) {
+        this.quantidadeAulunos = quantidadeAulunos;
     }
 
     public Turma(long idTurma, Disciplina disciplina, Professor professor, List<Aluno> alunos) {
