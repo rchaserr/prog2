@@ -5,7 +5,24 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-public class Aula extends Modelo<Aula>{
+public class Disciplina extends Modelo<Disciplina>{
+
+    /**
+     * @return the turmas
+     */
+    public List<Turma> getTurmas() {
+        return turmas;
+    }
+
+    /**
+     * @param turmas the turmas to set
+     */
+    public void setTurmas(List<Turma> turmas) {
+        this.turmas = turmas;
+    }
+    
+    @OneToMany
+    private List<Turma> turmas;
     
     @Column(nullable=false)
     private String nome;
@@ -26,7 +43,7 @@ public class Aula extends Modelo<Aula>{
     @OneToOne
     private Professor professor;
 
-    public Aula() {
+    public Disciplina() {
         this.nome = "";
         this.tempo = 0;
         this.quantidadeAulunos = 0;

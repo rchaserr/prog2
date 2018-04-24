@@ -8,7 +8,10 @@ import javax.persistence.*;
 public class Professor extends Funcionario{
     
     @OneToMany
-    private List<Aula> aulas;
+     private List<Turma> turmas;
+    
+    @OneToMany
+    private List<Disciplina> aulas;
 
     public Professor() {
         super();
@@ -19,11 +22,11 @@ public class Professor extends Funcionario{
         super(nome, cpf, salario);
     }
 
-    public List<Aula> getAulas() {
+    public List<Disciplina> getAulas() {
         return aulas;
     }
 
-    public void addAula(Aula aula) {
+    public void addAula(Disciplina aula) {
         this.aulas.add(aula);
     }
 }

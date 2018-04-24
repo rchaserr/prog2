@@ -7,11 +7,14 @@ import javax.persistence.*;
 @Entity
 public class Aluno extends Pessoa {
     
+    @OneToMany
+     private List<Turma> turmas;
+    
     @Column(nullable=false)
     private String matricula;
     
     @OneToMany
-    private List<Aula> aulas;
+    private List<Disciplina> aulas;
 
     public Aluno() {
         super();
@@ -32,11 +35,11 @@ public class Aluno extends Pessoa {
         this.matricula = matricula;
     }
    
-    public List<Aula> getAula() {
+    public List<Disciplina> getAula() {
         return aulas;
     }
     
-    public void addAula(Aula aula) {
+    public void addAula(Disciplina aula) {
         this.aulas.add(aula);
     } 
 }

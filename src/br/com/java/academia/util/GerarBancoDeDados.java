@@ -3,7 +3,7 @@ package br.com.java.academia.util;
 
 import br.com.java.academia.model.Administrativo;
 import br.com.java.academia.model.Aluno;
-import br.com.java.academia.model.Aula;
+import br.com.java.academia.model.Disciplina;
 import br.com.java.academia.model.Endereco;
 import br.com.java.academia.model.Professor;
 
@@ -42,7 +42,7 @@ public class GerarBancoDeDados {
 //        prof1.inserir();
         
         /* criando aula = piscina */
-        Aula piscina = new Aula();
+        Disciplina piscina = new Disciplina();
         piscina.setNome("natacao");
         piscina.setQuantidadeAulunos(10);
         piscina.setTempo(50.0);
